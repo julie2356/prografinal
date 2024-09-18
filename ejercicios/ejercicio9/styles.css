@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+
+:root {
+  --calculator-margin: 30px;
+  /* main background */
+  --very-dark-des-blue-main: #2e5cc2;
+  /* toggle background, keypad background */
+  --very-dark-des-blue: hsl(223, 77%, 30%);
+  /* screen background */
+  --very-dark-des-blue-screen: hsl(223, 77%, 30%);
+  /* -- KEYS -- */
+  /* - RESET & DEL keys - */
+  /* key background */
+  --des-dark-blue: hsl(225, 21%, 49%);
+  /* key shadow */
+  --des-dark-blue-shadow: hsl(224, 28%, 35%);
+  /* '=' key & toggle button */
+  /* key background */
+  --red: hsl(6, 63%, 50%);
+  /* key shadow */
+  --dark-red: hsl(6, 70%, 34%);
+  /* the other keys */
+  /* key background */
+  --light-grayish-orange: hsl(30, 25%, 89%);
+  /* key shadow */
+  --grayish-orange: hsl(28, 16%, 65%);
+  /* -- TEXT -- */
+  --very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --white: hsl(0, 0%, 100%);
+}
+
+#theme-switch1:checked ~ #calculator {
+  --text: var(--white);
+  --background-color: var(--very-dark-des-blue-main);
+  --reset-del-color: var(--white);
+  --reset-del-background-color: var(--des-dark-blue);
+  --reset-del-background-shadow: var(--des-dark-blue-shadow);
+  --equal-color: var(--red);
+  --equal-shadow-color: var(--dark-red);
+  --keyboard-background-color: var(--very-dark-des-blue);
+  --panel-input-color: var(--very-dark-des-blue-screen);
+  --generic-key-color: var(--light-grayish-orange);
+  --generic-key-shadow-color: var(--grayish-orange);
+  --key-number-color: var(--very-dark-grayish-blue);
+  --key-equal-color: var(--white);
+}
+
+html,
+body {
+  font-family: "Spartan", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-gray-main);
+}
+
+.theme-switcher{
+  font-weight: 500;
+  font-size: 30px;
+
+}
+
+p {
+    color: var(--text);
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+/* Calculadora */
+#calculator {
+    width: 220px;
+    padding: var(--calculator-margin);
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-rows: 10% 20% 70%;
+    border-radius: 8px;
+}
+
+/* Botones RESET, DEL y = */
+#del-btn,
+#reset-btn,
+#equal-btn {
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#del-btn,
+#reset-btn {
+  color: var(--reset-del-color);
+  background-color: var(--reset-del-background-color);
+  box-shadow: 0 6px var(--reset-del-background-shadow);
+}
+
+#del-btn:active,
+#reset-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px var(--reset-del-background-shadow);
+}
+
+
+#reset-btn {
+  grid-column: span 2;
+  width: 95%;
+}
+
+#equal-btn {
+  color: var(--key-equal-color);
+  background-color: var(--equal-color);
+  box-shadow: 0 6px var(--equal-shadow-color);
+}
+
+#equal-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px var(--equal-shadow-color);
+}
+
+#keyboard {
+  background-color: var(--keyboard-background-color);
+  border-radius: 15px;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: repeat(5, 20%);
+  grid-template-columns: repeat(4, 25%);
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+}
+
+#panel-input {
+  background-color: var(--panel-input-color);
+  text-align: right;
+  color: var(--text);
+  font-size: 30px;
+  font-family: "Spartan", arial;
+  font-weight: 700;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 100%;
+  height: 70%;
+  border: 0;
+  border-radius: 10px;
+}
+
+.my-btn {
+  font-family: "Spartan", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--key-number-color);
+  background-color: var(--generic-key-color);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 6px var(--generic-key-shadow-color);
+  width: 88%;
+  height: 70%;
+  place-self: center center;
+
+}
+
+/* Estilos para el botón de historial */
+#history-btn {
+  font-size: 15px;
+  font-weight: 700;
+  background-color: var(--des-dark-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 6px var(--des-dark-blue-shadow);
+  padding: 10px;
+}
+
+#history-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px var(--des-dark-blue-shadow);
+}
+
+.hidden {
+  display: none;
+}
+
+#history {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--very-dark-des-blue);
+  border-radius: 8px;
+  color: var(--text);
+}
+
+@media (max-width: 600px) {
+  .my-btn {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+
+  #panel-input {
+    font-size: 1.2em;
+  }
+}

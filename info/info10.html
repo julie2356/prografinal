@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <section class="recipes">
+        <div class="container">
+            <h1>Reloj digital</h1>
+            <h2>Descripcion</h2>
+            <p>Un reloj digital es un dispositivo que muestra la hora en formato numérico, a diferencia de un reloj analógico que utiliza manecillas y una esfera. Los relojes digitales pueden mostrar la hora, minutos y segundos de manera clara y precisa, y a menudo incluyen funciones adicionales como alarmas, temporizadores y cronómetros.</p>
+
+            <h2>Codigo Javacript</h2>
+            <pre><code>
+                function updateClock() {
+                    const now = new Date();
+                    const hours = String(now.getHours()).padStart(2, '0');
+                    const minutes = String(now.getMinutes()).padStart(2, '0');
+                    const seconds = String(now.getSeconds()).padStart(2, '0');
+                    const timeString = `${hours}:${minutes}:${seconds}`;
+                    document.getElementById('clock').textContent = timeString;
+                }
+                
+                setInterval(updateClock, 1000);
+                updateClock();  
+            </code></pre>
+        </div>
+    </section>
+</body>
+</html>

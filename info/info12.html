@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <section class="recipes">
+        <div class="container">
+            <h1>Autorizado para conducir o no</h1>
+            <img src="ensalada1.jpg" alt="">
+            <h2>Descripcion</h2>
+            <p>En este ejercicio de JavaScript, se desarrolla una función que determina si una persona está autorizada para conducir, basándose en su edad ingresada y en si tiene licencia de conducir.</p>
+
+            <h2>Codigo Javacript</h2>
+            <pre><code>
+            //Definir variable 
+            let edad = parseFloat(prompt("Ingrese su Edad"));
+
+
+            if(edad >= 18){
+                let sn = prompt("Usted Tiene Licencia?");
+                if( sn === "si"){
+                    document.write("Ya que usted tiene la edad adecuada y tiene licencia usted esta autorizado para conducir");
+                }
+                else{
+                    document.write("Ya que usted tiene la edad adecuada pero no licencia usted no esta autorizado para conducir ");
+                }
+            }
+            else if(edad <= 17){
+                document.write("Disculpe pero usted no tiene la edad suficiente para tener licencia y peor para estar autorizado aconducir")
+            }
+            else{
+                document.write("Ingrese un valor adecuado");
+            }
+                                    
+            </code></pre>
+        </div>
+    </section>
+</body>
+</html>

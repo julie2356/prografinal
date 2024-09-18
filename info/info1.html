@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <section class="recipes">
+        <div class="container">
+            <h1>Calculadora Basica</h1>
+            <img src="imagen1.png" alt="">
+            <h2>Descripcion</h2>
+            <p>Esta calculadora web es una herramienta simple y eficaz diseñada para realizar operaciones aritméticas básicas.El código define funciones en JavaScript para realizar operaciones matemáticas básicas: suma, resta, multiplicación, división y cálculo del residuo. Cada función toma dos números de campos de entrada en un formulario, realiza la operación correspondiente y muestra el resultado en otro campo de entrada. Es útil para crear una calculadora simple en una página web.</p>
+
+            <h2>Codigo Javacript</h2>
+            <pre><code>
+            function suma(){
+                var numero1 = parseFloat(document.getElementById('numero1').value);
+                var numero2 = parseFloat(document.getElementById('numero2').value);
+                var resultado = numero1 + numero2;
+                
+                document.getElementById('resultado').value = resultado;
+             }           
+                
+            function resta(){
+                var numero1 = parseFloat(document.getElementById('numero1').value);
+                var numero2 = parseFloat(document.getElementById('numero2').value);
+                var resultado = numero1 - numero2;
+                
+                document.getElementById('resultado').value = resultado;
+             }         
+                
+            function multiplicacion(){
+                var numero1 = parseFloat(document.getElementById('numero1').value);
+                var numero2 = parseFloat(document.getElementById('numero2').value);
+                var resultado = numero1 * numero2;
+                
+                 document.getElementById('resultado').value = resultado;
+              }         
+                
+            function division(){
+                var numero1 = parseFloat(document.getElementById('numero1').value);
+                var numero2 = parseFloat(document.getElementById('numero2').value);
+                var resultado = numero1 / numero2;
+                
+                document.getElementById('resultado').value = resultado;
+              }     
+                
+                
+            function residuo(){
+                var numero1 = parseFloat(document.getElementById('numero1').value);
+                 var numero2 = parseFloat(document.getElementById('numero2').value);
+                var resultado = numero1 % numero2;
+                
+                document.getElementById('resultado').value = resultado;
+             }
+            </code></pre>
+        </div>
+    </section>
+</body>
+</html>

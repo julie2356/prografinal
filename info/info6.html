@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <section class="recipes">
+        <div class="container">
+            <h1>Calcular Factorial</h1>
+            <h2>Descripcion</h2>
+            <p>Este código implementa una funcionalidad para calcular el factorial de un número ingresado por el usuario. El factorial de un número es el producto de todos los números enteros desde 1 hasta ese número.</p>
+
+            <h2>Codigo Javacript</h2>
+            <pre><code>
+                function calcularFactorial(n){
+                    if (n === 0 || n === 1){
+                        return 1;
+                    }
+                
+                    let resultado = 1;
+                    for (let i = n; i > 1; i--){
+                        resultado *= i;
+                    }
+                    return resultado;
+                }
+                
+                function mostrarFactoriales(){
+                    const numero = parseInt(document.getElementById('numero').value);
+                    const resultado = calcularFactorial(numero);
+                    document.getElementById('resultado').textContent = `El factorial de ${numero} es ${resultado}`;
+                }
+                                    
+            </code></pre>
+        </div>
+    </section>
+</body>
+</html>

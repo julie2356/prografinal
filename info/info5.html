@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <section class="recipes">
+        <div class="container">
+            <h1>Adivinar Numero</h1>
+            <h2>Descripcion</h2>
+            <p>El juego "Adivina el Número" es un juego interactivo donde el jugador intenta adivinar un número secreto generado aleatoriamente entre 1 y 100. El jugador tiene que introducir su suposición, y el juego le proporciona pistas sobre si el número secreto es más alto o más bajo que su intento. El objetivo es adivinar el número secreto en la menor cantidad de intentos posibles.</p>
+
+            <h2>Codigo Javacript</h2>
+            <pre><code>
+                let numeroSecreto = Math.floor(Math.random()*100)+1;
+                let intentos = 0;
+                
+                function adivinaNumero(){
+                    const intento = parseInt(document.getElementById('intento').value);
+                    intentos++;
+                    const pista = document.getElementById('pista');
+                
+                    if (intento < numeroSecreto){
+                        pista.textContent = 'Mas alto';
+                    } else if (intento > numeroSecreto){
+                        pista.textContent = 'Mas bajo'
+                    } else {
+                        pista.textContent = `Felicidades, adivinaste el numero en ${intentos} intentos.`;
+                    }
+                }
+            </code></pre>
+        </div>
+    </section>
+</body>
+</html>

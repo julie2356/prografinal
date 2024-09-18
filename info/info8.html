@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <section class="recipes">
+        <div class="container">
+            <h1>Tip Calculator</h1>
+            <h2>Descripcion</h2>
+            <p>En este ejercicio de JavaScript, desarrollarás una calculadora de tips que ayuda a los usuarios a calcular el monto de la propina a partir de la cuenta total de una comida o servicio. </p>
+
+            <h2>Codigo Javacript</h2>
+            <pre><code>
+        document.getElementById('tip-form').addEventListener('submit', function(event){
+        event.preventDefault();
+
+        //Obten los valores ingresados por el usuario
+        const billAmount =
+        parseFloat(document.getElementById('bill-amount').value);
+        const tipPercentage =
+        parseFloat(document.getElementById('tip-percentage').value);
+
+        //Calcular la propina 
+        const tipAmount = (billAmount * tipPercentage) / 100;
+
+        //Calcular el monto total con propina
+        const totalAmount = billAmount + tipAmount;
+
+        //Resultados 
+        document.getElementById('tip-amount').textContent = `Propina: $${tipAmount.toFixed(2)}`;
+        document.getElementById('total-amount').textContent = `Monto total con propina: $${totalAmount.toFixed(2)}`;
+
+
+    });
+                                    
+            </code></pre>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator</title>
+  </head>
+  <body>
+    
+    <input type="radio" name="theme-swith" checked="checked" class="theme-switcher" id="theme-switch1" />
+
+    <div id="calculator">
+      <div id="menu">
+        <p><b>calc</b></p>
+      </div>
+
+      <div id="panel">
+        <input id="panel-input" type="text" />
+      </div>
+
+      <div id="keyboard">
+        <button onclick="btnNbrClicked(event)" class="my-btn">7</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">8</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">9</button>
+        <button onclick="btnDeleteClicked(event)" class="my-btn" id="del-btn">
+          DEL
+        </button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">4</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">5</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">6</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">+</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">1</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">2</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">3</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">-</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">.</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">0</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">/</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">%</button>
+        <button onclick="btnNbrClicked(event)" class="my-btn">x</button>
+        <button onclick="bntResetClicked(event)" class="my-btn" id="reset-btn">
+          RESET
+        </button>
+        <button onclick="btnEqualClicked(event)" class="my-btn" id="equal-btn">
+          =
+        </button>
+      </div>
+    </div>
+
+    <div id="history" class="hidden">
+      <h3>History</h3>
+      <ul id="history-list"></ul>
+  </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
